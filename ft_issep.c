@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_issep.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 18:00:38 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/14 17:18:06 by tlevaufr         ###   ########.fr       */
+/*   i                                             +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/14 18:01:23 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/14 19:30:14 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	ft_isalnum(int c)
+int	ft_issep(char c, char *sep)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	int	i;
+
+	i = 0;
+	while (sep[i])
+	{
+		if (c == sep[i])
+			return (1);
+		t++;
+	}
+	return (0);
 }
