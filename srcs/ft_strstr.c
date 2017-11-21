@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 16:27:09 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/13 16:29:49 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/11/13 16:51:53 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/15 19:01:46 by Theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	size_t	size;
-	char	*str;
-	
-	size = 0;
-	if (!(str = malloc(sizeof(char) * ft_strlen(s) + 1)))
-		return (NULL);
-	// petit doute sur la nécessité du + 1.
-	while (str[size] && s[size])
+	size_t i;
+	size_t j;
+
+	i = 0;
+	j = 0;
+	if (needle[j] = 0)
+		return (haystack);
+	while (haystack[i])
 	{
-		str[size] = f(s[size]);
-		size++;
+		while (needle[j] == haystack[i] && needle[j] && haystack[i])
+		{
+			j++;
+			i++;
+		}
+		if (needle[j])
+			j = 0;
+		else
+			return (haystack[i - j]);
+		i++;
 	}
-	str[size] = '\0';
-	return (str)
+	return (NULL);
 }
+// un léger doute sur l'éventuelle nécessité de revenir en arriere apres l'echec d'une occurence 

@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 16:51:53 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/13 16:53:15 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/11/09 17:55:54 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/15 19:00:46 by Theo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strstr(const char *haystack, const *needle)
+char *ft_strcpy(char *dst, const char *src)
 {
-	size_t i;
-	size_t j;
+	int i;
 
 	i = 0;
-	j = 0;
-	if (needle[j] = 0)
-		return (haystack);
-	while (haystack[i])
+	while (src[i])
 	{
-		while (needle[j] == haystack[i] && needle[j] && haystack[i])
-		{
-			j++;
-			i++;
-		}
-		if (needle[j])
-			j = 0;
-		else
-			return (haystack[i - j]);
+		dst[i] = src[i];
 		i++;
 	}
-	return (NULL);
+	dst[i] = src[i];
+	return (dst);
 }
-// un léger doute sur l'éventuelle nécessité de revenir en arriere apres l'echec d'une occurence 
