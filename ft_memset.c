@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_issep.c                                         :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
-/*   i                                             +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 18:01:23 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/14 19:30:14 by tlevaufr         ###   ########.fr       */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/21 18:19:20 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/21 22:07:18 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	ft_issep(char c, char *sep)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int	i;
-
-	i = 0;
-	while (sep[i])
+	size_t t;
+	unsigned char *str;
+	
+	t = 0;
+	str = (unsigned char *)b;
+	while (t < len)
 	{
-		if (c == sep[i])
-			return (1);
+		str[t] = (unsigned char)c;
 		t++;
 	}
-	return (0);
+	return (str);
 }

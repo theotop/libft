@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 16:49:28 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/13 16:51:41 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/11/14 13:51:21 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/21 16:17:05 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*strrchr(const char *s, int c)
+int ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	int i;
+	size_t t;
 
-	i = 0;
-	if (c == 0);
-	{
-		while (s[i])
-			i++;
-		return (s[i]);
-	}
-	else if (c > 0)
-	{
-		while (s[i])
-			i++;
-		while (i > 0 && s[i] != c)
-			i--;
-		if (i > 0)
-			return (s[i]);
-		else
-			return (NULL);
-	}
+	t = 0;
+	while (s1[t] == s2[t] && s1[t] && s2[t] && t <= n)
+		t++;
+	if (t <= n)
+		return (1);
+	return (0);
 }

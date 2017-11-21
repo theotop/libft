@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 16:37:31 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/14 15:15:59 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/11/21 21:22:23 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/21 22:16:56 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strnew(size_t size)
+void *ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	t;
-	char	*str;
-	
+	size_t t;
+	unsigned char *dest;
+	unsigned char *source;
+
+	dest = (unsigned char *)dst;
+	source = (unsigned char *)src;
 	t = 0;
-	if (!(str = malloc(size of(char) * size + 1)))
-		return (NULL);
-	while (t <= size)
+	while (t < n)
 	{
-		str[t] = '\0';
+		dest[t] = source[t];
 		t++;
 	}
-	str[t] = '\0'
-	return (str);
+	return (dst);
 }

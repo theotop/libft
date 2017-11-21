@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 14:42:17 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/14 15:02:51 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/11/14 15:06:06 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/21 17:31:35 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	t;
+	size_t	len;
+	size_t	len2;
 	char	*str;
 
-	t = 0;
-	if (!(str = ft_strnew(len)))
+	len = 0;
+	len2 = 0;
+	if (!(str = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
 		return (NULL);
-	while (t < len)
-		str[t++] = s[start++];
-	str[t] = '\0';
+	while(s1[len])
+	{
+		str[len] = s1[len];
+		len++;
+	}
+	while (s2[len2])
+	{
+		str[len] = s2[len2];
+		len++;
+		len2++;
+	}
+	str[len] = '\0';
 	return (str);
 }

@@ -1,6 +1,6 @@
 #include <libft.h>
 
-int		ft_cntltr(char *s, size_t start, char sep)
+int		ft_cntltr(char const *s, size_t start, char sep)
 {
 	int	letters;
 
@@ -37,5 +37,6 @@ char	**ft_strsplit(char const *s, char c)
 		let = 0;
 		wrd++;
 	}
-	tab[wrd] = '\0';
+	tab[wrd] = NULL;
+	return (tab);
 }

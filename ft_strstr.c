@@ -6,32 +6,32 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:51:53 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/15 19:01:46 by Theo             ###   ########.fr       */
+/*   Updated: 2017/11/21 19:27:19 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strstr(const char *haystack, const char *needle)
+char	*ft_strstr(const char *str, const char *to_find)
 {
 	size_t i;
 	size_t j;
 
 	i = 0;
 	j = 0;
-	if (needle[j] = 0)
-		return (haystack);
-	while (haystack[i])
+	if (to_find[j] == 0)
+		return ((char *)str);
+	while (str[i])
 	{
-		while (needle[j] == haystack[i] && needle[j] && haystack[i])
+		while (to_find[j] == str[i] && to_find[j] && str[i])
 		{
 			j++;
 			i++;
 		}
-		if (needle[j])
+		if (to_find[j])
 			j = 0;
 		else
-			return (haystack[i - j]);
+			return ((char *)&str[i - j]);
 		i++;
 	}
 	return (NULL);

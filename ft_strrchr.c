@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 15:06:06 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/14 15:28:35 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/11/13 16:49:28 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/21 19:21:22 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*strrchr(const char *s, int c)
 {
-	size_t	len;
-	size_t	len2;
-	char	*str;
+	int i;
 
-	len = 0;
-	len2 = 0;
-	if (!(str = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
+	i = 0;
+	if (c == 0)
+	{
+		while (s[i])
+			i++;
+		return ((char *)&s[i]);
+	}
+	if (c > 0)
+	{
+		while (s[i])
+			i++;
+		while (i > 0 && s[i] != c)
+			i--;
+		if (i > 0)
+			return ((char *)&s[i]);
+		else
+			return (NULL);
+	}
+	else
 		return (NULL);
-	while(s1[len])
-	{
-		str[len] = s1[len];
-		len++;
-	}
-	while (s2[len2])
-	{
-		str[len] = s2[len2]
-		len++;
-		len2++;
-	}
-	str[len] = '\0';
-	return (str);
 }

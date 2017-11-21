@@ -6,13 +6,13 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 13:43:53 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/14 14:07:32 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/21 16:19:49 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	*ft_strequ(char const *s1, char const *s2)
+int	ft_strequ(char const *s1, char const *s2)
 {
 	size_t t;
 

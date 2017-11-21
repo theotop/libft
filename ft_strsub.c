@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 18:00:38 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/13 18:26:08 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/11/14 14:42:17 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/21 15:36:12 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	ft_isprint(int c)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	if ((c >= 32 && c <= 126)
-		return (1);
-	else
-		return (0);
+	size_t	t;
+	char	*str;
+
+	t = 0;
+	if (!(str = ft_strnew(len)))
+		return (NULL);
+	while (t < len)
+		str[t++] = s[start++];
+	str[t] = '\0';
+	return (str);
 }

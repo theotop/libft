@@ -18,7 +18,7 @@ int	ft_cntwds(char const *s, char sep)
 		}
 while (s[t] && s[t] != sep)
 		{
-			if (counted = 0)
+			if (counted == 0)
 			{
 				count++;
 				counted = 1;

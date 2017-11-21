@@ -6,7 +6,7 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 15:04:52 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/14 13:35:27 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/21 16:18:18 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_striter(char *s, void (*f)(char *))
 
 	t = 0;
 	while (s[t])
-		f(s[t++]);
+		f(&s[t++]);
 }

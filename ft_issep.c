@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_issep.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 18:50:32 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/13 16:35:42 by tlevaufr         ###   ########.fr       */
+/*   i                                             +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/14 18:01:23 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/21 16:21:42 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strncat(char *str1, const char *str2, size_t n)
+int	ft_issep(char c, char *sep)
 {
-	int i;
-	int j;
+	int	i;
 
 	i = 0;
-	j = 0;
-	while (str1[i])
+	while (sep[i])
+	{
+		if (c == sep[i])
+			return (1);
 		i++;
-	while (str2[j] && j < n)
-		str1[i++] = str2[j++];
-	str1[i] = '\0';
+	}
+	return (0);
 }

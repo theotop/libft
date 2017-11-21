@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 14:56:19 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/15 17:12:04 by Theo             ###   ########.fr       */
+/*   Created: 2017/11/14 12:58:16 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/21 15:54:42 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char *	ft_itoa(int i)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int	dec;
-	int	itemp;
-	char *str
+	size_t t;
 
-	dec = 1;
-	itemp = i;
-	while (itemp > 9)
+	t = 0;
+	while (s[t])
 	{
-		itemp = itemp / 10;
-		dec++;
+		f(t, s);
+		t++;
 	}
-	if (!(str = malloc(sizeof(char) * dec + 2)))
-			return (0);
-	str[dec + 1] = '\0';
-	dec--;
-	while (i > 9)
-	{
-		str[dec] = (i % 10) + 32;
-		i = i / 10;
-		dec--;
-	}
-	str[dec] = i;
-	return (str);
 }
