@@ -6,18 +6,18 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 21:31:15 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/21 22:14:16 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 15:58:59 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void *ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t t;
-	unsigned char *source;
-	unsigned char *dest;
-	
+	size_t			t;
+	unsigned char	*source;
+	unsigned char	*dest;
+
 	source = (unsigned char *)src;
 	dest = (unsigned char *)dst;
 	t = 0;

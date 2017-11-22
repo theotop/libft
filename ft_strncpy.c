@@ -6,15 +6,15 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:07:17 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/13 16:37:20 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:13:31 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char *ft_strncpy(char *dst, const char *src, size_t len)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (src[i] && i < len)

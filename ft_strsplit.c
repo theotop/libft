@@ -1,4 +1,16 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/22 14:47:07 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/22 16:05:13 by tlevaufr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_cntltr(char const *s, size_t start, char sep)
 {
@@ -28,11 +40,11 @@ char	**ft_strsplit(char const *s, char c)
 	while (wrd < ft_cntwds(s, c))
 	{
 		while (s[ptr] == c)
-				ptr++;
+			ptr++;
 		if (!(tab[wrd] = malloc(sizeof(char) * ft_cntltr(s, ptr, c) + 1)))
 			return (NULL);
 		while (s[ptr] && s[ptr] != c)
-				tab[wrd][let++] = s[ptr++];
+			tab[wrd][let++] = s[ptr++];
 		tab[wrd][let] = '\0';
 		let = 0;
 		wrd++;

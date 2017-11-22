@@ -4,13 +4,13 @@
 /*   ft_issep.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
-/*   i                                             +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 18:01:23 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/21 16:21:42 by tlevaufr         ###   ########.fr       */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/22 15:16:57 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/22 15:58:20 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_issep(char c, char *sep)
 {

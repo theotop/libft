@@ -6,16 +6,16 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 15:00:54 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/13 15:01:53 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:01:39 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_strclr(char *s)
 {
 	int i;
-	
+
 	i = 0;
 	while (s[i])
 	{

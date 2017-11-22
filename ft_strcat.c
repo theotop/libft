@@ -6,13 +6,13 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:38:43 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/13 15:00:27 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:03:38 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char *ft_strcat(char *str1, const char *str2)
+char	*ft_strcat(char *str1, const char *str2)
 {
 	int i;
 	int j;

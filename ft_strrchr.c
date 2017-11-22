@@ -6,11 +6,11 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:49:28 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/21 19:21:22 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:04:59 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*strrchr(const char *s, int c)
 {

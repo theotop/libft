@@ -6,17 +6,17 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:56:19 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/21 16:20:51 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 15:58:32 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char *	ft_itoa(int i)
+char	*ft_itoa(int i)
 {
-	int	dec;
-	int	itemp;
-	char *str;
+	int		dec;
+	int		itemp;
+	char	*str;
 
 	dec = 1;
 	itemp = i;
@@ -26,7 +26,7 @@ char *	ft_itoa(int i)
 		dec++;
 	}
 	if (!(str = malloc(sizeof(char) * dec + 2)))
-			return (0);
+		return (0);
 	str[dec + 1] = '\0';
 	dec--;
 	while (i > 9)

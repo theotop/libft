@@ -6,16 +6,16 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:50:32 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/21 18:17:33 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:12:48 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strncat(char *str1, const char *str2, size_t n)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
 	i = 0;
 	j = 0;

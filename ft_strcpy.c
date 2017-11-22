@@ -6,13 +6,13 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:55:54 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/15 19:00:46 by Theo             ###   ########.fr       */
+/*   Updated: 2017/11/22 16:02:05 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char *ft_strcpy(char *dst, const char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	int i;
 

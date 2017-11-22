@@ -6,11 +6,11 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:51:53 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/21 19:27:19 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:05:22 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strstr(const char *str, const char *to_find)
 {
@@ -36,4 +36,3 @@ char	*ft_strstr(const char *str, const char *to_find)
 	}
 	return (NULL);
 }
-// un léger doute sur l'éventuelle nécessité de revenir en arriere apres l'echec d'une occurence 

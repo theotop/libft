@@ -6,17 +6,17 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 21:22:23 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/21 22:16:56 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 15:58:50 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t t;
-	unsigned char *dest;
-	unsigned char *source;
+	size_t			t;
+	unsigned char	*dest;
+	unsigned char	*source;
 
 	dest = (unsigned char *)dst;
 	source = (unsigned char *)src;

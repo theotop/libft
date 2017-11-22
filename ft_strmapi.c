@@ -6,19 +6,18 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 13:35:48 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/21 16:24:35 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:03:31 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t t;
-	char *str;
+	size_t	t;
+	char	*str;
 
 	t = 0;
-	
 	if (!(str = malloc(sizeof(char) * ft_strlen(s) + 1)))
 		return (NULL);
 	while (s[t])

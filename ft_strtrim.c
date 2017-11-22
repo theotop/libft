@@ -6,11 +6,11 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:31:49 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/14 19:30:11 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:05:38 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strtrim(char const *s)
 {

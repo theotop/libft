@@ -6,16 +6,17 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 19:11:20 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/21 21:52:12 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 15:58:41 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memalloc(size_t size)
 {
 	void *mem;
-	if(!(mem = malloc(size)))
+
+	if (!(mem = malloc(size)))
 		return (NULL);
 	ft_memset(mem, 0, size);
 	return (mem);

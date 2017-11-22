@@ -6,15 +6,15 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:53:25 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/13 17:59:25 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:06:19 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		c+= 32;
+		c += 32;
 	return (c);
 }

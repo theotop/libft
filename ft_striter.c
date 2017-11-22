@@ -6,11 +6,11 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 15:04:52 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/21 16:18:18 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:02:49 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {

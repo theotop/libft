@@ -1,7 +1,19 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/22 15:01:33 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/11/22 16:00:59 by tlevaufr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putstr(const char *str)
 {
 	if (str)
-		write (1, str, ft_strlen(str));
+		write(1, str, ft_strlen(str));
 }

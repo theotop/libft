@@ -6,11 +6,11 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:25:40 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/21 18:34:45 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:03:19 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

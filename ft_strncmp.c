@@ -6,15 +6,15 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:03:34 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/13 17:16:13 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:13:05 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (s1[i] == s2[i] && s1[i] && s2[i] && i < n)
