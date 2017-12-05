@@ -10,6 +10,8 @@ SRC_FILES = ft_atoi.c \
 	ft_memset.c \
 	ft_memcpy.c \
 	ft_memccpy.c \
+	ft_memchr.c \
+	ft_memcmp.c \
 	ft_strchr.c \
 	ft_strlcat.c \
 	ft_strrchr.c \
@@ -48,6 +50,7 @@ SRC_FILES = ft_atoi.c \
 	ft_striter.c \
 	ft_strnequ.c \
 	ft_memalloc.c \
+	ft_memmove.c \
 	ft_putstr_fd.c \
 	ft_striteri.c \
 	ft_strnew.c \
@@ -63,9 +66,9 @@ $(NAME) :
 clean :
 	rm -f $(OBJ_FILES)
 
-fclean: clean
+fclean : clean
 	rm -f $(NAME)
 
-re: fclean all
+re : fclean all
 
 

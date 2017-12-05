@@ -6,7 +6,7 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 13:51:21 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/22 16:04:17 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/12/04 20:25:32 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	size_t t;
-
-	t = 0;
-	while (s1[t] == s2[t] && s1[t] && s2[t] && t <= n)
-		t++;
-	if (t <= n)
-		return (1);
-	return (0);
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	return (!ft_strncmp(s1, s2, n));
 }

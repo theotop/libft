@@ -6,7 +6,7 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 15:06:06 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/22 16:03:02 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/12/04 21:23:53 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	len = 0;
 	len2 = 0;
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	if (!(str = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
 		return (NULL);
 	while (s1[len])

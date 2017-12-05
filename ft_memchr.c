@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_issep.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 15:16:57 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/12/04 22:54:29 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/12/04 18:53:29 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/12/04 19:04:22 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_issep(char c, char *sep)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
+	size_t			i;
+	unsigned char	*string;
 
+	string = (unsigned char *)s;
 	i = 0;
-	while (sep[i])
+	while (i < n)
 	{
-		if (c == sep[i])
-			return (1);
+		if (string[i] == (unsigned char)c)
+			return (string + i);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

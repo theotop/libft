@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_issep.c                                         :+:      :+:    :+:   */
+/*   memcmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 15:16:57 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/12/04 22:54:29 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/12/04 19:06:19 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/12/04 19:17:32 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_issep(char c, char *sep)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	const unsigned char	*str;
+	const unsigned char	*str2;
 
-	i = 0;
-	while (sep[i])
+	str = s1;
+	str2 = s2;
+	while (n > 0)
 	{
-		if (c == sep[i])
-			return (1);
-		i++;
+		if (*str != *str2)
+			return ((int)(*str - *str2));
+		str++;
+		str2++;
+		n--;
 	}
 	return (0);
 }

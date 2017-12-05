@@ -6,36 +6,30 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 15:14:48 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/22 16:10:37 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/12/04 21:36:52 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_cntwds(char const *s, char sep)
+size_t	ft_cntwds(char const *s, char sep)
 {
 	size_t	t;
 	size_t	count;
-	int		counted;
+	size_t	in_word;
 
 	t = 0;
-	count = (s[t] == sep || s[t] == '\0') ? 0 : 1;
-	counted = count;
+	in_word = 0;
+	count = 0;
 	while (s[t])
 	{
-		while (s[t] && s[t] == sep)
+		if (!in_word && s[t] != sep)
 		{
-			counted = 0;
-			t++;
-		}
-	}
-	while (s[t] && s[t] != sep)
-	{
-		if (counted == 0)
-		{
+			in_word = 1;
 			count++;
-			counted = 1;
 		}
+		if (in_word && s[t] == sep)
+			in_word = 0;
 		t++;
 	}
 	return (count);

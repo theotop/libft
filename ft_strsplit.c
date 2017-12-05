@@ -6,13 +6,13 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 14:47:07 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/22 16:05:13 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/12/05 00:44:18 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_cntltr(char const *s, size_t start, char sep)
+static int		ft_cntltr(char const *s, size_t start, char sep)
 {
 	int	letters;
 
@@ -25,17 +25,17 @@ int		ft_cntltr(char const *s, size_t start, char sep)
 	return (letters);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	size_t	ptr;
-	int		wrd;
+	size_t	wrd;
 	size_t	let;
 	char	**tab;
 
 	wrd = 0;
 	let = 0;
 	ptr = 0;
-	if (!(tab = malloc(sizeof(char *) * ft_cntwds(s, c) + 1)))
+	if (!s || !(tab = malloc(sizeof(char *) * ft_cntwds(s, c) + 1)))
 		return (NULL);
 	while (wrd < ft_cntwds(s, c))
 	{

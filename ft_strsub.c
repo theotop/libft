@@ -6,7 +6,7 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 14:42:17 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/22 16:05:32 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/12/05 00:44:15 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	t = 0;
+	if (s == NULL)
+		return (NULL);
 	if (!(str = ft_strnew(len)))
 		return (NULL);
 	while (t < len)

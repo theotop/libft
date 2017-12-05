@@ -6,7 +6,7 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:37:14 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/22 14:46:17 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/12/04 19:15:36 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 int		ft_atoi(const char *str);
 void	*ft_bzero(void *s, size_t n);
-int		ft_cntwds(char const *s, char sep);
+size_t	ft_cntwds(char const *s, char sep);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -31,8 +31,11 @@ char	*ft_itoa(int i);
 void	*ft_memalloc(size_t size);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
 void	ft_memdel(void **ap);
 void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memmove(void *dst, const void *src, size_t len);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putchar(char c);
 void	ft_putendl_fd(const char *str, int fd);
@@ -62,7 +65,7 @@ int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strnew(size_t size);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
-char	*strrchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_strstr(const char *str, const char *to_find);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);

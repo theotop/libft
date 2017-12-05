@@ -6,7 +6,7 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:07:17 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/22 16:13:31 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/11/24 00:14:41 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	size_t i;
 
 	i = 0;
+	if (len == 0)
+		return (dst);
 	while (src[i] && i < len)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i++] = '\0';
 	while (i < len)
 		dst[i++] = '\0';
 	return (dst);

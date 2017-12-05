@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_issep.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 15:16:57 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/12/04 22:54:29 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/12/04 17:07:15 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/12/04 18:48:55 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_issep(char c, char *sep)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int	i;
+	size_t			t;
+	unsigned char	*dest;
+	unsigned char	*source;
 
-	i = 0;
-	while (sep[i])
+	dest = (unsigned char *)dst;
+	source = (unsigned char *)src;
+	t = len;
+	if (dst > src)
 	{
-		if (c == sep[i])
-			return (1);
-		i++;
+		while (t > 0)
+		{
+			dest[t - 1] = source[t - 1];
+			t--;
+		}
 	}
-	return (0);
+	else if (src > dst)
+		ft_memcpy(dst, src, len);
+	return (dst);
 }

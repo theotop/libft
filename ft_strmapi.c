@@ -6,7 +6,7 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 13:35:48 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/22 16:03:31 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/12/04 23:52:22 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	t;
 	char	*str;
 
+	if (s == NULL || f == NULL)
+		return (NULL);
 	t = 0;
 	if (!(str = malloc(sizeof(char) * ft_strlen(s) + 1)))
 		return (NULL);
