@@ -6,7 +6,7 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:37:14 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/12/04 19:15:36 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/12/05 17:53:40 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@
 # include <unistd.h>
 
 int		ft_atoi(const char *str);
-void	*ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n);
 size_t	ft_cntwds(char const *s, char sep);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
+int		ft_isneg(int i);
 int		ft_isprint(int c);
 int		ft_issep(char c, char *sep);
 char	*ft_itoa(int i);
@@ -73,5 +74,7 @@ char	*ft_strtrim(char const *s);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+void	ft_swap(int *a, int *b);
+char	*ft_uitoa(unsigned int i, int neg);
 
 #endif

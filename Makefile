@@ -31,6 +31,7 @@ SRC_FILES = ft_atoi.c \
 	ft_strmapi.c \
 	ft_strsub.c \
 	ft_isdigit.c \
+	ft_isneg.c \
 	ft_putendl_fd.c \
 	ft_strdel.c \
 	ft_strncat.c \
@@ -54,6 +55,8 @@ SRC_FILES = ft_atoi.c \
 	ft_putstr_fd.c \
 	ft_striteri.c \
 	ft_strnew.c \
+	ft_swap.c \
+	ft_uitoa.c \
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 

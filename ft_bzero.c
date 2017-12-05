@@ -6,13 +6,13 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 21:13:47 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/11/22 15:54:39 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2017/12/05 17:55:33 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	return (ft_memset(s, 0, n));
+	ft_memset(s, 0, n);
 }

@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_isneg.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/04 17:07:15 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/12/05 17:17:11 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/12/05 14:50:42 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/12/05 15:04:36 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int		ft_isneg(int n)
 {
-	size_t			t;
-	unsigned char	*dest;
-	unsigned char	*source;
-
-	dest = (unsigned char *)dst;
-	source = (unsigned char *)src;
-	t = len;
-	if (dst > src)
-	{
-		while (t > 0)
-		{
-			dest[t - 1] = source[t - 1];
-			t--;
-		}
-	}
-	else if (src > dst)
-		ft_memcpy(dst, src, len);
-	return (dst);
+	if (n >= 0)
+		return (0);
+	return (1);
 }

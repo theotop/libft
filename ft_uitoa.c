@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_uitoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/04 17:07:15 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/12/05 17:17:11 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/12/05 14:18:12 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/12/05 14:27:49 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char		*ft_uitoa(unsigned int i, int neg)
 {
-	size_t			t;
-	unsigned char	*dest;
-	unsigned char	*source;
+	int				dec;
+	unsigned int	itemp;
+	char			*str;
 
-	dest = (unsigned char *)dst;
-	source = (unsigned char *)src;
-	t = len;
-	if (dst > src)
+	dec = 1;
+	itemp = i;
+	while (itemp > 9)
 	{
-		while (t > 0)
-		{
-			dest[t - 1] = source[t - 1];
-			t--;
-		}
+		itemp = itemp / 10;
+		dec++;
 	}
-	else if (src > dst)
-		ft_memcpy(dst, src, len);
-	return (dst);
+	if (!(str = ft_strnew(dec + 1 + neg)))
+		return (NULL);
+	dec = neg ? dec : dec - 1;
+	while (i > 9)
+	{
+		str[dec] = (i % 10) + '0';
+		i = i / 10;
+		dec--;
+	}
+	str[1] = neg ? (i % 10 + '0') : str[1];
+	str[0] = neg ? '-' : (i % 10 + '0');
+	return (str);
 }

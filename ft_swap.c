@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tlevaufr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 15:00:54 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/12/05 17:29:24 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/11/08 13:07:21 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/12/05 14:55:04 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_strclr(char *s)
+void	ft_swap(int *a, int *b)
 {
-	int i;
+	int tmp;
 
-	i = 0;
-	if (s != NULL)
-	{
-		while (s[i])
-		{
-			s[i] = '\0';
-			i++;
-		}
-	}
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
