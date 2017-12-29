@@ -61,7 +61,9 @@ SRC_FILES = ft_atoi.c \
 	ft_lstdelone.c \
 	ft_lstdel.c \
 	ft_lstadd.c  \
-	ft_lstiter.c
+	ft_lstad_end.c \
+	ft_lstiter.c \
+	ft_lstmap.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 

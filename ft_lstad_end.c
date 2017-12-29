@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstad_end.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/19 21:47:03 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/12/20 15:20:10 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/12/20 15:20:53 by tlevaufr          #+#    #+#             */
+/*   Updated: 2017/12/20 16:05:44 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_lstad_end(t_list **alst, t_list *new)
 {
-	while (lst)
+	t_list	*ptr;
+
+	ptr = *alst;
+	if (new)
 	{
-		f(lst);
-		lst = lst->next;
+		while (ptr->next)
+			ptr = ptr->next;
+		ptr->next = new;
+		new->next = NULL;
 	}
 }
