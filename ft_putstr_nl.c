@@ -1,40 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 15:06:06 by tlevaufr          #+#    #+#             */
-/*   Updated: 2018/01/18 19:23:08 by tlevaufr         ###   ########.fr       */
+/*   Created: 2017/11/22 15:01:33 by tlevaufr          #+#    #+#             */
+/*   Updated: 2018/01/22 16:09:51 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_putstr(const char *str)
 {
-	size_t	len;
-	size_t	len2;
-	char	*str;
-
-	len = 0;
-	len2 = 0;
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
-	if (!(str = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
-		return (NULL);
-	while (s1[len])
-	{
-		str[len] = s1[len];
-		len++;
-	}
-	while (s2[len2])
-	{
-		str[len] = s2[len2];
-		len++;
-		len2++;
-	}
-	str[len] = '\0';
-	return (str);
+	if (str)
+		write(1, str, ft_strlen(str));
+	ft_putchar('\n');
 }

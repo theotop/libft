@@ -6,7 +6,7 @@
 /*   By: tlevaufr <tlevaufr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:37:31 by tlevaufr          #+#    #+#             */
-/*   Updated: 2017/12/05 16:57:06 by tlevaufr         ###   ########.fr       */
+/*   Updated: 2018/02/21 16:46:21 by tlevaufr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ char	*ft_strnew(size_t size)
 		str[t] = '\0';
 		t++;
 	}
-	str[t] = '\0';
 	return (str);
 }
