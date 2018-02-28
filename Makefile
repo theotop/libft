@@ -1,5 +1,22 @@
 NAME = libft.a
 
+# PROGRESS BAR
+T = $(words $(OBJ))
+N = 0
+C = $(words $N)$(eval N := x $N)
+ECHO = "[`expr $C  '*' 100 / $T`%]"
+
+#Colors
+_GREY=\x1b[30m
+_RED=\x1b[31m
+_GREEN=\x1b[32m
+_YELLOW=\x1b[33m
+_BLUE=\x1b[34m
+_PURPLE=\x1b[35m
+_CYAN=\x1b[36m
+_WHITE=\x1b[37m
+_END=\x1b[0m
+
 SRC_FILES = ft_atoi.c \
 	ft_bzero.c \
 	ft_memdel.c \
@@ -71,14 +88,15 @@ OBJ_FILES = $(SRC_FILES:.c=.o)
 all : $(NAME)
 
 $(NAME) :
-	gcc -Wall -Wextra -Werror -c $(SRC_FILES) -I.
-	ar rc $(NAME) $(OBJ_FILES)
+	@gcc -Wall -Wextra -Werror -c $(SRC_FILES) -I.
+	@ar rc $(NAME) $(OBJ_FILES)
+	@echo "\n$(NAME) compil $(_GREEN)[OK]$(_END)"
 
 clean :
-	rm -f $(OBJ_FILES)
+	@rm -f $(OBJ_FILES)
 
 fclean : clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re : fclean all
 
